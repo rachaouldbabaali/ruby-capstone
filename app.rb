@@ -16,6 +16,11 @@ class App
   end
 
   def run
-    menu
+    loop do
+      menu
+      user_option = gets.chomp.to_i
+
+      break if user_option == 13
+    end
   end
 end
