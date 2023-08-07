@@ -1,8 +1,8 @@
-require 'app.rb'
+require './app'
 
 def main
-    myApp = App.New
-    myApp.run
+  my_app = App.new
+  my_app.run
 end
 
 main
