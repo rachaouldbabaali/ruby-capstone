@@ -1,6 +1,6 @@
-require '../item'
+require_relative '../item'
 require_relative 'genre'
-require '.../modules/album_tracker'
+require_relative '../../modules/album_tracker'
 
 class MusicAlbum < Item
   attr_accessor :name, :on_spotify, :publish_date, :genre
