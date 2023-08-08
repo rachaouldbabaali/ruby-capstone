@@ -26,7 +26,7 @@ class Item
 
   def list_items
     all.each do |item|
-      puts item.to_s
+      puts item
     end
 
     puts 'No items avaliable' if all.empty?

@@ -4,10 +4,10 @@ require_relative '../../modules/album_tracker'
 
 class MusicAlbum < Item
   include AlbumTracker
-  
+
   attr_accessor :name, :on_spotify, :publish_date, :genre
 
-  def initialize(name, publish_date, id, archived, genre, on_spotify = false)
+  def initialize(name, publish_date, _id, _archived, genre, on_spotify = false)
     @name = name
     @on_spotify = on_spotify
     @genre = genre
@@ -15,7 +15,7 @@ class MusicAlbum < Item
     super()
   end
 
-  # Returns all music albums 
+  # Returns all music albums
   def self.all
     ObjectSpace.each_object(self).to_a
   end
@@ -31,5 +31,4 @@ class MusicAlbum < Item
                                                                    'Not available on spotify'
                                                                  end}"
   end
-
 end

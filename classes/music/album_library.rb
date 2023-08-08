@@ -45,7 +45,7 @@ class AlbumLibrary
     end
     puts
     Genre.all.each do |genre|
-      puts genre.to_s
+      puts genre
       puts
     end
   end

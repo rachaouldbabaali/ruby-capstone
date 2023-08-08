@@ -31,11 +31,7 @@ class App
   def books_navigator(option)
     case option
     when '1'
-      
-    when '2'
-      
-    when '3'
-      
+      'list all books'
     when '4'
       run
     else
@@ -64,12 +60,8 @@ class App
   def games_navigator(option)
     case option
     when '1'
-      
+      'list all games'
     when '2'
-      
-    when '3'
-      
-    when '4'
       run
     else
       puts 'That is not a valid option'
