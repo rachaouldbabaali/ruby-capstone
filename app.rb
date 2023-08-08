@@ -69,7 +69,6 @@ class App
   end
 
   def run
-    
     app_prompt
     option = gets.chomp
     if option == '4'
