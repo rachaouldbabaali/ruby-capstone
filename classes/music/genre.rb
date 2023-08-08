@@ -12,7 +12,16 @@ class Genre
     @items = []
   end
 
+  def self.all
+    ObjectSpace.each_object(self).to_a
+  end
+
+  def to_s
+    "ID: #{@id} | Name: #{@name}"
+  end
+
   def add_item(item)
     @items << item
+    item.add_genre = self
   end
 end
