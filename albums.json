@@ -1,0 +1,58 @@
+[
+  {
+    "id": null,
+    "name": "aa",
+    "publish_date": "2020-03-03",
+    "on_spotify": true,
+    "archived": null,
+    "genre_id": 591
+  },
+  {
+    "id": null,
+    "name": "lati",
+    "publish_date": "2023-09-03",
+    "on_spotify": false,
+    "archived": null,
+    "genre_id": 425
+  },
+  {
+    "id": null,
+    "name": "3",
+    "publish_date": "2010-06-03",
+    "on_spotify": true,
+    "archived": null,
+    "genre_id": 272
+  },
+  {
+    "id": null,
+    "name": "fd",
+    "publish_date": "fds",
+    "on_spotify": false,
+    "archived": null,
+    "genre_id": 327
+  },
+  {
+    "id": null,
+    "name": "ghghgh",
+    "publish_date": "2010-03-06",
+    "on_spotify": true,
+    "archived": null,
+    "genre_id": 334
+  },
+  {
+    "id": null,
+    "name": "hh",
+    "publish_date": "2010-03-06",
+    "on_spotify": true,
+    "archived": null,
+    "genre_id": 142
+  },
+  {
+    "id": null,
+    "name": "trt",
+    "publish_date": "2010-06-03",
+    "on_spotify": true,
+    "archived": null,
+    "genre_id": 404
+  }
+]

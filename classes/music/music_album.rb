@@ -3,13 +3,16 @@ require_relative 'genre'
 require_relative '../../modules/album_tracker'
 
 class MusicAlbum < Item
+  include AlbumTracker
+  
   attr_accessor :name, :on_spotify, :publish_date, :genre
 
   def initialize(name, publish_date, id, archived, genre, on_spotify = false)
-    super(id, publish_date, archived)
     @name = name
     @on_spotify = on_spotify
     @genre = genre
+    @publish_date = publish_date
+    super()
   end
 
   # Returns all music albums 
