@@ -1,5 +1,6 @@
 require 'json'
-require_relative '../classes/music'
+require_relative '../classes/music_album'
+require_relative '../classes/genre'
 
 module AlbumTracker
   # store music album
@@ -52,4 +53,5 @@ module AlbumTracker
                          album['on_spotify'])
         end
     end
+
 end
