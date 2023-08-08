@@ -28,5 +28,15 @@ module AlbumTracker
       File.write('./genres.json', JSON.pretty_generate([{ id: id, name: name }]))
     end
   end
-  
+
+  # load from json file
+  def self.load_genres
+    return unless File.exist?('genres.json')
+
+    data = File.read('genres.json')
+    genres = JSON.parse(data)
+    genres.each do |genre|
+      Genre.new(genre['id'], genre['name'])
+    end
+  end
 end
