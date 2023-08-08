@@ -16,4 +16,17 @@ module AlbumTracker
                                          archived: archived, genre_id: genre.id }]))
     end
   end
+
+  # store genre file
+  def store_genre
+    if File.exist?('genres.json')
+      data = File.read('genres.json')
+      genres = JSON.parse(data)
+      genres << { id: id, name: name }
+      File.write('./genres.json', JSON.pretty_generate(genres))
+    else
+      File.write('./genres.json', JSON.pretty_generate([{ id: id, name: name }]))
+    end
+  end
+  
 end
