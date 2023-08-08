@@ -39,4 +39,17 @@ module AlbumTracker
       Genre.new(genre['id'], genre['name'])
     end
   end
+
+    # load from json file
+    def self.load_albums
+        return unless File.exist?('albums.json')
+    
+        data = File.read('albums.json')
+        albums = JSON.parse(data)
+        albums.each do |album|
+          genre_object = Genre.all.select { |genre| genre.id.to_i == album['genre_id'] }
+          MusicAlbum.new(album['name'], album['publish_date'], album['id'], album['archived'], genre_object,
+                         album['on_spotify'])
+        end
+    end
 end
