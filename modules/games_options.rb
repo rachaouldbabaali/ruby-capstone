@@ -46,6 +46,7 @@ module Gameoptions
     author_last_name = take_input_label('Enter the author last name')
     create_author(author_first_name, author_last_name)
     puts('Created successfully')
+    store_authors
   end
 
   def create_author(author_first_name, author_last_name)
