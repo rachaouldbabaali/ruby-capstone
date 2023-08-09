@@ -12,7 +12,11 @@ class AddBook
 
     puts 'Publisher: '
     publisher = gets.chomp
-    data = Book.new(cover_state, publisher)
+
+    puts 'Date of publication YYYY-MM-DD'
+    publish_date = gets.chomp
+
+    data = Book.new(cover_state, publisher, publish_date)
     books.push(data)
     @savedata.write_data('books.json', books)
   end
