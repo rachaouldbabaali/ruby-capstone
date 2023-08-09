@@ -17,4 +17,17 @@ class List
       end
     end
   end
+
+  def list_all_labels
+    @label_items = @savedata.read_data('labels.json')
+    return unless @label_items.is_a?(Array)
+
+    @label_items.each do |label|
+      if label.is_a?(Array)
+        labels.each { |label| puts "Title: #{label.title}" }
+      elsif label.is_a?(Hash)
+        puts "Title: #{label[:title]}"
+      end
+    end
+  end
 end
