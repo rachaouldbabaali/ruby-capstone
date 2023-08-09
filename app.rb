@@ -46,12 +46,13 @@ class App
 
   def application
     add_book = AddBook.new
-    list_all_books = List.new
+    display = List.new
     addlabel = AddLabel.new
 
     options = {
+      6 => -> { display.list_all_labels },
       9 => -> { add_book.add_book(@books) },
-      1 => -> { list_all_books.list_all_books },
+      1 => -> { display.list_all_books },
       13 => -> { addlabel.add_label(@labels) }
     }
 
