@@ -16,4 +16,13 @@ module Prompt
     puts '3 - Add a music album'
     puts '4 - Back'
   end
+
+  def games_prompt
+    puts
+    puts 'Games catalog'
+    puts '1 - List all games'
+    puts '2 - List all authors'
+    puts '3 - Add a game'
+    puts '4 - Back'
+  end
 end
