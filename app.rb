@@ -2,14 +2,17 @@ require_relative 'modules/prompt'
 require_relative 'classes/music/music_album'
 require_relative 'classes/music/genre'
 require_relative 'classes/music/album_library'
+require_relative 'modules/games_option'
 
 class App
   include Prompt
+  include Gameoptions
 
   def initialize
     puts 'Start cataloging your things'
     AlbumTracker.load_genres
     AlbumTracker.load_albums
+    load_author
   end
 
   def app_navigator(option)
@@ -20,7 +23,8 @@ class App
       music_albums_prompt
       music_albums_navigator(gets.chomp)
     when '3'
-      puts 'You are in the games catalog'
+      games_prompt
+      games_navigator(gets.chomp)
     when '4'
       run
     else
@@ -60,8 +64,15 @@ class App
   def games_navigator(option)
     case option
     when '1'
-      'list all games'
+      list_games
+      app_navigator('3')
     when '2'
+      list_authors
+      app_navigator('3')
+    when '3'
+      create_game
+      app_navigator('3')
+    when '4'
       run
     else
       puts 'That is not a valid option'
