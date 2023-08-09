@@ -13,7 +13,7 @@ class List
       if book.is_a?(Array)
         books.each { |book| puts "Cover: #{book.cover_state} Publisher: #{book.publisher}" }
       elsif book.is_a?(Hash)
-        puts "Cover: #{book[:cover_state]} Publisher: #{book[:publisher]}"
+        puts "Cover: #{book[:cover_state]} Publisher: #{book[:publisher]} Date of publication: #{book[:publish_date]}"
       end
     end
   end
