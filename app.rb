@@ -2,7 +2,7 @@ require_relative 'modules/prompt'
 require_relative 'classes/music/music_album'
 require_relative 'classes/music/genre'
 require_relative 'classes/music/album_library'
-require_relative 'modules/games_option'
+require_relative 'modules/games_options'
 
 class App
   include Prompt
