@@ -3,8 +3,8 @@ require_relative '../item'
 class Book < Item
   attr_accessor :cover_state, :publisher
 
-  def initialize(cover_state, publisher)
-    super()
+  def initialize(cover_state, publisher, publish_date)
+    super(publish_date)
     @cover_state = cover_state
     @publisher = publisher
   end
@@ -16,7 +16,8 @@ class Book < Item
   def to_hash
     {
       cover_state: @cover_state,
-      publisher: @publisher
+      publisher: @publisher,
+      publish_date: @publish_date
     }
   end
 end
