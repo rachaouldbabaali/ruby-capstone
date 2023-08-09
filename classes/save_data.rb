@@ -11,5 +11,9 @@ class SaveData
     end
   end
 
-  
+  def write_data(file, content)
+    data = content.map(&:to_hash)
+    json = JSON.pretty_generate(data)
+    File.write(file, json)
+  end
 end
