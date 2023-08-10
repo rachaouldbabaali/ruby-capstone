@@ -34,7 +34,6 @@ class App
     @save_data = SaveData.new
     @books = @save_data.read_data('books.json')
     @labels = @save_data.read_data('labels.json')
-
   end
 
   def app_navigator(option)
