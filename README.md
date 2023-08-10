@@ -20,9 +20,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 🎯 School Library<a name="about-project"></a>
+# 🎯 Catalog of my things<a name="about-project"></a>
 
-> This project is a tool to record what books are in the library and who borrows them. A librarian can add new students or teachers, add new books, and save records of who borrowed a given book and when.
+> This is a console application that is built with ruby. It is used to manage items of an individual in a catalog. It has functionalities that include adding a book, music and game, with different properties attached to these items.
 >
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,9 +37,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers.**
-- **Add new books.**
-- **Save records of who borrowed a given book and when.**
+- **Add music album**
+- **Add books**
+- **Add games**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,13 +68,13 @@ you have to those tools in your local machine.
 Clone the project.
 
 ```bash
-  git clone https://github.com/rachaouldbabaali/school-library.git
+  git clone https://github.com/rachaouldbabaali/ruby-capstone.git
 ```
 
 Go to the project directory.
 
 ```bash
-  cd school-library
+  cd ruby-capstone
 ```
 
 
@@ -83,7 +83,7 @@ Go to the project directory.
 ### Test
 
 ``` test
-rspec ./tests
+rspec ./spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,15 +94,17 @@ rspec ./tests
 
 ### Author
 
+👤 **Tumaini Maganiko**
+
+GitHub: [@githubhandle](https://github.com/tumainimaganiko)
+Twitter: [@twitterhandle](https://twitter.com/Chief2maini)
+LinkedIn: [LinkedIn](https://www.linkedin.com/in/tumainimaganiko/)
+
+
 👤 **RACHA OULDBABAALI**
 
 - GitHub: [@racha](https://github.com/rachaouldbabaali)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rachaouldbabaali)
-
-👤 **Wael Elsafty**
-
-- GitHub: [@waelelsafty07](https://github.com/waelelsafty07)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/waelelsafty07)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +112,7 @@ rspec ./tests
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Establish due dates for book returns.]**
+- [ ] **[Add remove method]**
 
 <!-- CONTRIBUTING -->
 
@@ -118,7 +120,7 @@ rspec ./tests
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/rachaouldbabaali/school-library/issues).
+Feel free to check the [issues page](https://github.com/rachaouldbabaali/ruby-capstone/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
