@@ -12,7 +12,6 @@ class ListData
     }
     hash['Author'] = "#{item.author.first_name} #{item.author.last_name}" if item.author
 
-
     props.each_with_index { |prop, id| hash[prop_names[id]] = prop }
 
     list(index, hash)
