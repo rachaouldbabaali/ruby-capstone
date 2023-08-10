@@ -2,21 +2,22 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  <!-- - [🚀 Live Demo](#live-demo) -->
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🔭 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [🎯 Catalog of my things](#-catalog-of-my-things)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Test](#test)
+  - [👥 Authors ](#-authors-)
+    - [Author](#author)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [👋 Show your support ](#-show-your-support-)
+  - [🔭Acknowledgments ](#acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -40,14 +41,6 @@
 - **Add music album**
 - **Add books**
 - **Add games**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
-
-- Coming Soon... -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,9 +89,9 @@ rspec ./spec
 
 👤 **Tumaini Maganiko**
 
-GitHub: [@githubhandle](https://github.com/tumainimaganiko)
-Twitter: [@twitterhandle](https://twitter.com/Chief2maini)
-LinkedIn: [LinkedIn](https://www.linkedin.com/in/tumainimaganiko/)
+- GitHub: [@githubhandle](https://github.com/tumainimaganiko)
+- Twitter: [@twitterhandle](https://twitter.com/Chief2maini)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tumainimaganiko/)
 
 
 👤 **RACHA OULDBABAALI**
@@ -112,7 +105,7 @@ LinkedIn: [LinkedIn](https://www.linkedin.com/in/tumainimaganiko/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add remove method]**
+- [ ] **Add Frontend Interface**
 
 <!-- CONTRIBUTING -->
 
@@ -136,7 +129,7 @@ Give a ⭐️ if you like this project!
 
 ## 🔭Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank Microverse. for giving me this wonderful opportunity to work on this project.
+- We would like to thank Microverse. for giving us this wonderful opportunity to work on this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
