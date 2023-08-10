@@ -1,7 +1,5 @@
-# author_data.rb
-
-require 'json'
 require_relative 'author'
+require 'json'
 
 class AuthorData
   def self.path

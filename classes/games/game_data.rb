@@ -1,5 +1,3 @@
-# game_data.rb
-
 require 'json'
 
 class GameData

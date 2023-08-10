@@ -1,4 +1,3 @@
-require 'rspec'
 require_relative '../classes/games/author'
 require_relative '../classes/item'
 

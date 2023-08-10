@@ -1,9 +1,8 @@
-require 'rspec'
 require_relative '../classes/games/game'
 
 describe Game do
   context 'when creating a game' do
-    game = Game.new(99,'My Game Title', true, '2000-06-16', '2000-02-27')
+    game = Game.new(99, 'My Game Title', true, '2000-06-16', '2000-02-27')
 
     it 'creates a new game with the given parameters' do
       expect(game).to be_an_instance_of Game
