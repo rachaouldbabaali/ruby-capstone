@@ -14,6 +14,22 @@ CREATE TABLE my_catalog(
   CONSTRAINT genre_fk FOREIGN KEY (genre_id) REFERENCES Genres (id)
 );
 
+-- create table for books
+CREATE TABLE books(
+  ID SERIAL PRIMARY KEY,
+  publish_date DATE NOT NULL,
+  publisher VARCHAR(30),
+  cover_state VARCHAR(30),
+  label_ID INT REFERENCES labels(ID)
+);
+
+-- create table for labels
+CREATE TABLE labels(
+  ID SERIAL PRIMARY KEY,
+  title VARCHAR(30),
+  color VARCHAR(30)
+);
+
 -- create table for music_albums
 CREATE TABLE music_albums(
   ID SERIAL PRIMARY KEY,

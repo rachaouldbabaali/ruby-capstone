@@ -1,21 +1,30 @@
+require_relative 'classes/books/addbook'
+require_relative 'classes/list'
+require_relative 'classes/save_data'
+require_relative 'classes/books/addlabel'
 require_relative 'modules/prompt'
 require_relative 'classes/music/music_album'
 require_relative 'classes/music/genre'
 require_relative 'classes/music/album_library'
-
+require_relative 'modules/album_tracker'
 class App
+  attr_accessor :books
+
   include Prompt
 
   def initialize
     puts 'Start cataloging your things'
     AlbumTracker.load_genres
     AlbumTracker.load_albums
+    @save_data = SaveData.new
+    @books = @save_data.read_data('books.json')
+    @labels = @save_data.read_data('labels.json')
   end
 
   def app_navigator(option)
     case option
     when '1'
-      puts 'You are in the books catalog'
+      books_navigator
     when '2'
       music_albums_prompt
       music_albums_navigator(gets.chomp)
@@ -28,14 +37,35 @@ class App
     end
   end
 
-  def books_navigator(option)
-    case option
-    when '1'
-      'list all books'
-    when '4'
-      run
-    else
-      puts 'That is not a valid option'
+  def books_navigator
+    add_book = AddBook.new
+    display = List.new
+    addlabel = AddLabel.new
+    options = {
+      1 => -> { display.list_all_books },
+      2 => -> { display.list_all_labels },
+      3 => -> { add_book.add_book(@books) },
+      4 => -> { addlabel.add_label(@labels) },
+      5 => method(:run)
+    }
+
+    executer(options)
+  end
+
+  def executer(options)
+    loop do
+      book_prompt
+      user_option = gets.chomp.to_i
+
+      if options.key?(user_option)
+        options[user_option].call
+      elsif user_option == 6
+        puts 'Thank you for using this app'
+      else
+        puts 'Invalid Selection'
+      end
+
+      break if [6, 5].include?(user_option)
     end
   end
 
