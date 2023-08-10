@@ -6,7 +6,7 @@ require_relative 'modules/prompt'
 require_relative 'classes/music/music_album'
 require_relative 'classes/music/genre'
 require_relative 'classes/music/album_library'
-
+require_relative 'modules/album_tracker'
 class App
   attr_accessor :books
 
@@ -21,43 +21,10 @@ class App
     @labels = @save_data.read_data('labels.json')
   end
 
-  # def menu
-  #   puts '1 - List all Books'
-  #   puts '2 - List all music albums'
-  #   puts '3 - List all movies'
-  #   puts '4 - List of games'
-  #   puts "5 - List all genres (e.g 'Comedy', 'Thriller')"
-  #   puts "6 - List all labels (e.g. 'Gift', 'New')"
-  #   puts "7 - List all authors (e.g. 'Stephen King')"
-  #   puts "8 - List all sources (e.g. 'From a friend', 'Online shop')"
-  #   puts '9 - Add a book'
-  #   puts '10 - Add a music album'
-  #   puts '11 - Add a movie'
-  #   puts '12 - Add a game'
-  #   puts '13 - Add a label'
-  #   puts '14 - Exit applicattion'
-  # end
-
-  # def exucuter(options)
-  #   loop do
-  #     menu
-  #     user_option = gets.chomp.to_i
-
-  #     if options.key?(user_option)
-  #       options[user_option].call
-  #     else
-  #       puts 'Invalid Selection'
-  #     end
-
-  #     break if user_option == 14
-  #   end
-  # end
-
   def app_navigator(option)
     case option
     when '1'
-      book_prompt
-      books_navigator(gets.chomp)
+      books_navigator
     when '2'
       music_albums_prompt
       music_albums_navigator(gets.chomp)
@@ -70,23 +37,35 @@ class App
     end
   end
 
-  def books_navigator(option)
+  def books_navigator
     add_book = AddBook.new
     display = List.new
     addlabel = AddLabel.new
-    case option
-    when '1'
-      display.list_all_labels
-    when '2'
-      add_book.add_book(@books)
-    when '3'
-      display.list_all_books
-    when '4'
-      addlabel.add_label(@labels)
-    when '5'
-      run
-    else
-      puts 'That is not a valid option'
+    options = {
+      1 => -> { display.list_all_books },
+      2 => -> { display.list_all_labels },
+      3 => -> { add_book.add_book(@books) },
+      4 => -> { addlabel.add_label(@labels) },
+      5 => method(:run)
+    }
+
+    executer(options)
+  end
+
+  def executer(options)
+    loop do
+      book_prompt
+      user_option = gets.chomp.to_i
+
+      if options.key?(user_option)
+        options[user_option].call
+      elsif user_option == 6
+        puts 'Thank you for using this app'
+      else
+        puts 'Invalid Selection'
+      end
+
+      break if [6, 5].include?(user_option)
     end
   end
 
@@ -128,19 +107,4 @@ class App
     end
     app_navigator(option)
   end
-
-  # def application
-  #   add_book = AddBook.new
-  #   display = List.new
-  #   addlabel = AddLabel.new
-
-  #   options = {
-  #     6 => -> { display.list_all_labels },
-  #     9 => -> { add_book.add_book(@books) },
-  #     1 => -> { display.list_all_books },
-  #     13 => -> { addlabel.add_label(@labels) }
-  #   }
-
-  #   exucuter(options)
-  # end
 end
