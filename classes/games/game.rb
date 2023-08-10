@@ -6,7 +6,7 @@ class Game < Item
 
   def initialize(id, title, multiplayer, last_played_at, publish_date)
     @title = title
-    super() # Call the superclass constructor with the published_date argument
+    super(id) # Call the superclass constructor with the published_date argument
     @multiplayer = multiplayer
     @last_played_at = Date.parse(last_played_at)
     @author = nil # Initialize author to nil
