@@ -1,15 +1,15 @@
 class Author
-  attr_accessor :items
-  attr_reader :id
+  attr_accessor :first_name, :last_name, :items
 
   def initialize(first_name, last_name)
-    @id = Random.rand(1...1000)
     @first_name = first_name
     @last_name = last_name
     @items = []
+    @id = Random.rand(1...1000)
   end
 
-  def add_item(item)
-    @items << item
+  def add_items(given_item)
+    @items << given_item
+    given_item.author(self)
   end
 end
