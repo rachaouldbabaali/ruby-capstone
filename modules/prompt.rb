@@ -16,4 +16,13 @@ module Prompt
     puts '3 - Add a music album'
     puts '4 - Back'
   end
+
+  def book_prompt
+    puts '1 - List all Books'
+    puts "2 - List all labels (e.g. 'Gift', 'New')"
+    puts '3 - Add a book'
+    puts '4 - Add a label'
+    puts '5 - Back'
+    puts '6 - Exit applicattion'
+  end
 end
