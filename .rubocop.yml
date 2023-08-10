@@ -18,6 +18,8 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
+Metrics/ParameterLists:
+  Enabled: false
 
 
 Style/Documentation:
@@ -49,4 +51,6 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
+  Enabled: false
+Style/OptionalBooleanParameter:
   Enabled: false
