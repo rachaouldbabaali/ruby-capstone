@@ -12,7 +12,7 @@ class MusicAlbum < Item
     @on_spotify = on_spotify
     @genre = genre
     @publish_date = publish_date
-    super()
+    super(id)
   end
 
   # Returns all music albums

@@ -1,10 +1,11 @@
 [
   {
-    "id": null,
-    "name": "racha",
-    "publish_date": "2020-3-03",
-    "on_spotify": true,
-    "archived": null,
-    "genre_id": 340
+    "id": 912,
+    "name": "Tumaini",
+    "publish_date": "1990/12/23",
+    "on_spotify": false,
+    "archived": false,
+    "genre_id": 936
+
   }
 ]
