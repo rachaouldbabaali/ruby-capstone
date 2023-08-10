@@ -1,22 +1,12 @@
 [
   {
+    "cover_state": "Ghost",
+    "publisher": "Justin",
+    "publish_date": "2021-03-08"
+  },
+  {
     "cover_state": "Tumaini",
     "publisher": "Maganiko",
-    "publish_date": "2023-01-26"
-  },
-  {
-    "cover_state": "Ebenezer",
-    "publisher": "Tumaini",
-    "publish_date": "2022-09-05"
-  },
-  {
-    "cover_state": "Mama",
-    "publisher": "Baba",
-    "publish_date": "2022-07-09"
-  },
-  {
-    "cover_state": "Microverse",
-    "publisher": "Casmus",
-    "publish_date": "2018-10-09"
+    "publish_date": "2009-07-06"
   }
 ]
